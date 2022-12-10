@@ -1,0 +1,188 @@
+# Assignment: Classes
+# Date Submitted: 09-December-2022
+# Authors: John Chernoff
+# Program Description:
+# This program serves as a management system application for Alberta Hospital (AH).
+# Allows user to enter data and generate reports.
+# Uses the following classes throughout the application:
+#  #1 - 	Doctor
+#  #2 - 	Facility
+#  #3 - 	Laboratory
+#  #4 - 	Patient
+#  #5 - 	Management
+# This individual component contains classes 1 and 5.
+
+
+# Class #1: Doctor
+class Doctor:
+    def __init__(self, id, name, specialization, working_time, qualification, room_number):
+        self.id = id
+        self.name = name
+        self.specialization = specialization
+        self.working_time = working_time
+        self.qualification = qualification
+        self.room_number = room_number
+
+    def format_doctor_info(self):
+        doc = self.id + "_" + self.name + "_" + self.specialization + "_" + self.working_time + "_" + self.qualification + "_" + self.room_number
+        doc = str(doc)
+        print(doc)
+        return self
+
+    def enter_doctor_info(self):
+        id = str(input("Enter the doctor ID: \n"))
+        name = str(input("Enter the doctor Name: \n"))
+        spec = str(input("Enter the doctor Specialization: \n"))
+        time = str(input("Enter the doctor Working Time: \n"))
+        qual = str(input("Enter the doctor Qualification: \n"))
+        numb = str(input("Enter the doctor Room Number: \n"))
+        self.id = id
+        self.name = name
+        self.specialization = spec
+        self.working_time = time
+        self.qualification = qual
+        self.room_number = numb
+        return self
+
+    def read_doctor_file(self) -> object:
+        with open('doctors.txt', 'r') as f:
+            doc = f.read()
+            doc = doc.replace("_", " ")
+            doc = doc.split()
+        if self == title:
+            self.id = doc[0]
+            self.name = doc[1]
+            self.specialization = doc[2]
+            self.working_time = doc[3]
+            self.qualification = doc[4]
+            self.room_number = doc[5]
+        elif self == doc_1:
+            self.id = int(doc[6])
+            self.name = doc[7]
+            self.specialization = doc[8]
+            self.working_time = doc[9]
+            self.qualification = doc[10]
+            self.room_number = doc[11]
+        elif self == doc_2:
+            self.id = int(doc[12])
+            self.name = doc[13]
+            self.specialization = doc[14]
+            self.working_time = doc[15]
+            self.qualification = doc[16]
+            self.room_number = doc[17]
+        elif self == doc_3:
+            self.id = int(doc[18])
+            self.name = doc[19]
+            self.specialization = doc[20]
+            self.working_time = doc[21]
+            self.qualification = doc[22]
+            self.room_number = doc[23]
+        elif self == doc_4:
+            self.id = int(doc[24])
+            self.name = doc[25]
+            self.specialization = doc[26]
+            self.working_time = doc[27]
+            self.qualification = doc[28]
+            self.room_number = doc[29]
+        elif self == doc_5:
+            self.id = int(doc[30])
+            self.name = doc[31]
+            self.specialization = doc[32]
+            self.working_time = doc[33]
+            self.qualification = doc[34]
+            self.room_number = doc[35]
+        elif self == doc_6:
+            self.id = int(doc[36])
+            self.name = doc[37]
+            self.specialization = doc[38]
+            self.working_time = doc[39]
+            self.qualification = doc[40]
+            self.room_number = doc[41]
+        return self
+
+    def search_doctor_by_id(self):
+        search_id = int(input("Enter the doctor ID:\n"))
+        if doc_1.id and doc_2.id and doc_3.id and doc_4.id and doc_5.id and doc_6.id and doc_7.id != search_id:
+            print("Sorry no Doctor with that ID exists in the database. Please try again.")
+        elif doc_1.id == search_id:
+            print(doc_1.id, doc_1.name, doc_1.specialization, doc_1.room_number, doc_1.qualification,
+                  doc_1.working_time)
+        elif doc_2.id == search_id:
+            print(doc_2.id, doc_2.name, doc_2.specialization, doc_2.room_number, doc_2.qualification,
+                  doc_2.working_time)
+        elif doc_3.id == search_id:
+            print(doc_3.id, doc_3.name, doc_3.specialization, doc_3.room_number, doc_3.qualification,
+                  doc_3.working_time)
+        elif doc_4.id == search_id:
+            print(doc_4.id, doc_4.name, doc_4.specialization, doc_4.room_number, doc_4.qualification,
+                  doc_4.working_time)
+        elif doc_5.id == search_id:
+            print(doc_5.id, doc_5.name, doc_5.specialization, doc_5.room_number, doc_5.qualification,
+                  doc_5.working_time)
+        elif doc_6.id == search_id:
+            print(doc_6.id, doc_6.name, doc_6.specialization, doc_6.room_number, doc_6.qualification,
+                  doc_6.working_time)
+        elif doc_7.id == search_id:
+            print(doc_7.id, doc_7.name, doc_7.specialization, doc_7.room_number, doc_7.qualification,
+                  doc_7.working_time)
+        return self
+
+    def search_doctor_by_name(self):
+        print("cookies")
+        return self
+
+    def display_doctor_info(self):
+        print("cookies")
+        return self
+
+    def edit_doctor_info(self):
+        print("cookies")
+        return self
+
+    def display_doctor_list(self):
+        print("cookies")
+        return self
+
+    def write_list_of_doctors_to_file(self):
+        title.format_doctor_info()
+        doc_1.format_doctor_info()
+        doc_2.format_doctor_info()
+        doc_3.format_doctor_info()
+        doc_4.format_doctor_info()
+        doc_5.format_doctor_info()
+        doc_6.format_doctor_info()
+        doc_7.format_doctor_info()
+        return self
+
+    def add_doctor_to_file(self):
+        print("cookies")
+        return self
+
+
+title = Doctor('2', '3', '4', '5', '6', '7')
+doc_1 = Doctor('2', '3', '4', '5', '6', '7')
+doc_2 = Doctor('2', '3', '4', '5', '6', '7')
+doc_3 = Doctor('2', '3', '4', '5', '6', '7')
+doc_4 = Doctor('2', '3', '4', '5', '6', '7')
+doc_5 = Doctor('2', '3', '4', '5', '6', '7')
+doc_6 = Doctor('2', '3', '4', '5', '6', '7')
+doc_7 = Doctor(2, '3', '4', '5', '6', '7')
+title.read_doctor_file()
+print(title.id, title.name, title.specialization, title.room_number, title.qualification, title.working_time)
+doc_1.read_doctor_file()
+print(doc_1.id, doc_1.name, doc_1.specialization, doc_1.room_number, doc_1.qualification, doc_1.working_time)
+doc_2.read_doctor_file()
+print(doc_2.id, doc_2.name, doc_2.specialization, doc_2.room_number, doc_2.qualification, doc_2.working_time)
+doc_3.read_doctor_file()
+print(doc_3.id, doc_3.name, doc_3.specialization, doc_3.room_number, doc_3.qualification, doc_3.working_time)
+doc_4.read_doctor_file()
+print(doc_4.id, doc_4.name, doc_4.specialization, doc_4.room_number, doc_4.qualification, doc_4.working_time)
+doc_5.read_doctor_file()
+print(doc_5.id, doc_5.name, doc_5.specialization, doc_5.room_number, doc_5.qualification, doc_5.working_time)
+doc_6.read_doctor_file()
+print(doc_6.id, doc_6.name, doc_6.specialization, doc_6.room_number, doc_6.qualification, doc_6.working_time)
+#doc_7.enter_doctor_info()
+print(doc_7.id, doc_7.name, doc_7.specialization, doc_7.room_number, doc_7.qualification, doc_7.working_time)
+print(doc_3.id, doc_3.name, doc_3.specialization, doc_3.room_number, doc_3.qualification, doc_3.working_time)
+doc_1.search_doctor_by_id()
+print(doc_1.id)
